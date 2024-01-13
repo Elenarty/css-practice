@@ -1,0 +1,16 @@
+
+ <div class="footer">
+    <div class="footer-box row">
+        <div class="bage col-3">
+            <img src="/svg/bootstrap-solid.svg.svg">
+            <span class="copiright">Copyright 2023</span> 
+        </div>
+         {{#each footer}}
+        <div class="footer-nav col-3"> 
+           <span class="footer-title"> {{title}}</span> 
+                {{> link list=links isVertical=true}}
+            
+        </div>
+        {{/each}}
+    </div>
+ </div>

@@ -1,1 +1,5 @@
- <a href="{{url}}" {{#if blank}} target="_blank"{{/if}} class="link" >{{text}}</a> 
+<div class="nav {{#if isVertical}}nav-vertical{{else}}nav-inline{{/if}}">
+    {{#each list}}
+      <a href="{{url}}" {{#if blank}} target="_blank"{{/if}} class="link" >{{text}}</a>
+    {{/each}} 
+</div>

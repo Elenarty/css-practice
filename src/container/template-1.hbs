@@ -1,0 +1,25 @@
+<main>
+    <div class="page">
+        <section> 
+            {{> header}}
+        </section>
+
+        <section class="hero"> 
+            {{#with hero}}  
+               {{> hero}}
+            {{/with}}
+        </section>
+       
+        <section>
+            <div class="card-desk">
+              {{#each plans}}
+                 {{> card data=features}}
+              {{/each}}
+            </div>
+        </section>
+
+        <section>
+           {{> footer}}
+        </section> 
+    </div>
+</main>

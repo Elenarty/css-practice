@@ -21,102 +21,129 @@ router.get('/', function (req, res) {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/template-7', function (req, res) {
+router.get('/template-1', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('template-7', {
-    layout: 'template-7' ,
+  res.render('template-1', {
+    layout: 'template-1',
     page: {
-      title: "Example Page"
+      title: 'Template 1 Page',
     },
-
-    header: {
-      brandName: "Logo",
-      userOnline: 10,
-
-      ad: {
-        text: "Best service to Boost your priority faster",
-        url: "www.example.com"
-      },
-
-      links: [
-        {
-          url: "www.example.com",
-          text: "Home"
-        },
-        {
-          url: "www.example.com/about",
-          text: "About Us"
-        },
-        {
-          url: "www.example.com/services",
-          text: "Services"
-        },
-        {
-          url: "www.example.com/contact",
-          text: "Contact Us"
-        },
-        {
-          url: "www.example.com/blog",
-          text: "Blog"
-        }
-      ]
-    },
-
-    hero: {
-      title: "The most professional service",
-      description: "I am incredibly grateful for the outstanding work done by this team. Their promptness and attention to detail",
-      button: {
-        url: "www.example.com/buy",
-        text: "Go to shop"
-      }
-    },
-
-    about: {
-      heading: "About shop",
-      info: "Lorem Ipsum is not an actual shop, but rather a type of dummy text used as a placeholder in designs to simulate the appearance of written content. It's often used by designers and developers as a temporary substitute for actual text while they're working on a project. The Lorem Ipsum text is derived from a Latin passage by Cicero, but it's been modified and scrambled so that it's no longer legible. The purpose of using Lorem Ipsum is to give designers an idea of how their designs will look when filled with text, without being distracted by the actual content of the text itself."
-    },
-
-    articles: [
+    header: [
       {
-        id: 1,
-        photo: "https://picsum.photos/400/200",
-        name: "Lorem Ipsum",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id dolor eget sapien lobortis finibus. Fusce euismod, ipsum sit amet pulvinar imperdiet, sapien nunc viverra nulla, vel pulvinar velit leo sed velit."
+        text: 'Features',
+        url: 'https://example.com/home',
       },
       {
-        id: 2,
-        isNew: true,
-        photo: "https://picsum.photos/400/200",
-        name: "Dolor Sit Amet",
-        description: "Etiam luctus ante eget ante convallis iaculis. Nunc viverra quam vel libero accumsan, non malesuada neque vestibulum. Curabitur malesuada, velit ut pretium ullamcorper, lacus elit vehicula sapien, ut sollicitudin quam metus eget sapien."
+        text: 'Enterprise',
+        url: 'https://example.com/about',
       },
       {
-        id: 3,
-        photo: "https://picsum.photos/400/200",
-        name: "Ipsum Dolor",
-        description: "Sed euismod risus sit amet sapien fermentum, vitae scelerisque lectus hendrerit. Integer at velit tristique, varius dolor in, gravida est. Nunc sagittis justo vel velit tempor, eget faucibus nulla posuere."
-      }
+        text: 'Support',
+        url: 'https://example.com/services',
+      },
     ],
-
-    footer: {
-      copyright: "© Copyrights Shop 2022-2023. All rights reserved",
-      pages: [
-        {
-          path: "www.example.com/terms",
-          name: "Terms of Use"
-        },
-        {
-          path: "www.example.com/privacy",
-          name: "Privacy Policy"
-        },
-        {
-          path: "www.example.com/refund",
-          name: "Refund Policy"
-        }
-      ]
-    }
+    hero: {
+      title: 'Pricing',
+      text: "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.",
+    },
+    plans: [
+      {
+        name: 'Free',
+        price: 0,
+        features: [
+          '10 users included',
+          '2 GB of storage',
+          'Email support',
+          'Help center access',
+        ],
+        button: 'Sign up for free',
+      },
+      {
+        name: 'Pro',
+        price: 15,
+        features: [
+          '20 users included',
+          '4 GB of storage',
+          'Priority email support',
+          'Help center access',
+        ],
+        button: 'Get started',
+      },
+      {
+        name: 'Enterprise',
+        price: 30,
+        features: [
+          '30 users included',
+          '15 GB of storage',
+          'Phone and email support',
+          'Help center access',
+        ],
+        button: 'Contact us',
+      },
+    ],
+    footer: [
+      {
+        title: 'Features',
+        links: [
+          {
+            text: 'Cool stuff',
+            url: 'https://example.com/cool-stuff',
+          },
+          {
+            text: 'Random feature',
+            url: 'https://example.com/random-feature',
+          },
+          {
+            text: 'Team feature',
+            url: 'https://example.com/team-feature',
+          },
+          {
+            text: 'Stuff for developers',
+            url: 'https://example.com/stuff-for-developers',
+          },
+        ],
+      },
+      {
+        title: 'Resources',
+        links: [
+          {
+            text: 'Resource name',
+            url: 'https://example.com/resource-name',
+          },
+          {
+            text: 'Another resource',
+            url: 'https://example.com/another-resource',
+          },
+          {
+            text: 'Final resource',
+            url: 'https://example.com/final-resource',
+          },
+        ],
+      },
+      {
+        title: 'About',
+        links: [
+          {
+            text: 'Team',
+            url: 'https://example.com/team',
+          },
+          {
+            text: 'Locations',
+            url: 'https://example.com/locations',
+          },
+          {
+            text: 'Privacy',
+            url: 'https://example.com/privacy',
+          },
+          {
+            text: 'Terms',
+            url: 'https://example.com/terms',
+          },
+        ],
+      },
+    ],
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
