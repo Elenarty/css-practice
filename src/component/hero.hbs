@@ -1,4 +1,9 @@
     <div>
-            <h1>{{title}}</h1>
-            <p>{{text}}</p>
+        <h1>{{title}}</h1>
+        <p>{{text}}</p>
+        <button>
+           {{#with button}}
+                <a href="{{url}}" {{#if blank}} target="_blank"{{/if}} class="btn btn-primary">{{text}}</a>
+           {{/with}}
+        </button>
     </div>

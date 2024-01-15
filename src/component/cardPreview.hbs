@@ -1,0 +1,15 @@
+<div class="card col-6">
+    <div class="card-body">
+        <div class="card-date"> 
+           <span>{{date}}</span>
+            {{#each category}}
+               <span class="card-category card-{{id}}">{{text}}</span>
+            {{/each}}
+        </div>
+        <div class="card-title">
+            <h2>{{title}}</h2>
+            <span>{{text}}</span>
+        </div>
+        <a href="#">Continue reading</a>
+    </div>
+</div>

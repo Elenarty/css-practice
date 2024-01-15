@@ -1,0 +1,57 @@
+<main>
+    <div class="page">
+        <section> 
+            {{> header}}
+        </section>
+
+        <section class="hero"> 
+            {{#with hero}}  
+               {{> hero}}
+            {{/with}}
+        </section>
+       
+        <section>
+            <div class="card-desk row">
+              {{#each preview}}
+                 {{> cardPreview}}
+              {{/each}}
+            </div>
+        </section>
+
+        <section>
+            <div class="news row">
+                <div class="categories">
+                    <h3>List of posts</h3>
+                    <div class="categories-nav">        
+                      {{> link list=categories}}
+                    </div>
+                </div>
+                <div class="news-blog">
+                    <div class="card-news col-8">
+                        {{#each news}}
+                            {{> cardNews}}
+                         {{/each}}
+                    </div>
+                    <div class="about-list col-4">
+                        <div class="about">
+                            <h3>About</h3>
+                            <p>{{about}}</p>
+                        </div>
+                        <div class="archive">
+                            <h2>Archives</h2>
+                            {{> link list=archive}}   
+                        </div>
+                        <div class="social">
+                            <h2>Social</h2>
+                            {{> link list=social}}   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+           {{> footer}}
+        </section> 
+    </div>
+</main>
