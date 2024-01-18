@@ -1,0 +1,32 @@
+<main>
+    <div class="page">
+        <section> 
+            {{> header}}
+        </section>
+
+        <section class="hero"> 
+            {{#with hero}}  
+               {{> hero}}
+               <img class="hero-img " src="{{photo}}" alt="500x500">
+            {{/with}}
+        </section>
+       
+        <section>
+            <div class="card-blog row">
+              {{#each blog}}
+                 {{> cardBlog}}
+              {{/each}}
+            </div>
+        </section>
+
+        <section>
+            {{#with form}}
+               {{> form}}
+            {{/with}}
+        </section>
+
+        <section>
+           {{> footer}}
+        </section> 
+    </div>
+</main>
