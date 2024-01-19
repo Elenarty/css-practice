@@ -1,0 +1,32 @@
+<main>
+    <div class="page">
+        <section> 
+            {{> header}}
+        </section>
+
+        <section class="main"> 
+            {{#with main}} 
+               <img class="main-img" src="{{image}}" alt="500x500"> 
+               {{> main}}
+            {{/with}}
+        </section>
+       
+        <section>
+            <div class="featured row">
+              {{#each featured}}
+                 {{> cardBlog title=heading text=info img=photo button=linkText href=linkUrl}}
+              {{/each}}
+            </div>
+        </section>
+
+        <section class="actions row">
+            {{#each actions}}
+               {{> form title=heading href=url button=text}}
+            {{/each}}
+        </section>
+
+        <section>
+           {{> footer}}
+        </section> 
+    </div>
+</main>
