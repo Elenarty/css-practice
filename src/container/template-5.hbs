@@ -1,0 +1,58 @@
+<main>
+    <div class="page">
+        <section> 
+            {{> header}}
+        </section>
+
+        <section class="main"> 
+            {{#with messages}} 
+               <div class="form-messages">
+                    <strong>{{title}}</strong>
+                    {{#each list}} 
+                     <div class="info">
+                        <strong>{{name}}</strong>
+                        <p>{{message}}</p>
+                        <span>{{day}}</span>
+                     </div>
+                    {{/each}}      
+                    <a class="btn btn-open" href="#">All messages</a>
+                </div>
+            {{/with}}
+            {{#with form}} 
+                <div class="inputs">
+                    <form class="sing-in">
+                        <strong>{{title}}</strong>
+                        <div class="form-inputs">
+                            {{#each inputs}}
+                               <input type="{{type}}" id="{{id}}" name="{{name}}" placeholder="{{placeholder}}" />
+                            {{/each}}
+                        </div>
+                        <div class="checkbox-remember">
+                           {{#with checkbox}}
+                               <input type="checkbox" id="{{name}}" name="name" value="Remember me" >
+                               <label for="{{name}}">{{label}}</label>
+                           {{/with}}
+                        </div>
+                        <button>
+                           <a href="#" class="btn btn-sing-in">{{button}}</a>
+                        </button>
+                        <p>{{info}}</p>
+                  </form>
+                </div>
+            {{/with}}
+        </section>
+
+        <section class="advantages row">
+            {{#each advantages}}
+                <div class="card">
+                   <strong>{{title}}</strong>
+                   <p>{{text}}</p>
+                </div>
+            {{/each}}
+        </section>
+
+        <section>
+           {{> footer}}
+        </section> 
+    </div>
+</main>
