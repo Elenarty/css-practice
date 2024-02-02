@@ -1,0 +1,78 @@
+<main>
+    <div class="page">
+        <section> 
+            {{> header}}
+        </section>
+
+        <section class="main"> 
+            {{#with info}} 
+               <div class="form-info">
+                    <strong>{{title}}</strong>
+                    <p>{{description}}</p>
+                </div>
+            {{/with}}
+            {{#with form}} 
+                    <form class="inputs-sing-in">
+                        <div class="form-inputs">
+                            {{#each inputs}}
+                               <input type="{{type}}" id="{{id}}" name="{{name}}" placeholder="{{placeholder}}" />
+                            {{/each}}
+                        </div>
+                        <div class="checkbox-remember">
+                           {{#with checkbox}}
+                               <input type="checkbox" id="{{name}}" name="name" value="Remember me" >
+                               <label for="{{name}}">{{label}}</label>
+                           {{/with}}
+                        </div>
+                        <button>
+                           <a href="#" class="btn btn-sing-in">{{button}}</a>
+                        </button>
+                        <p>{{info}}</p>
+                  </form>
+            {{/with}}
+        </section>
+
+        <section class="updates">
+            {{#with updates}}
+                <strong>{{title}}</strong>
+                 <div class="card-group-update">
+            {{#each list}}
+                <div class="card-update">
+                    <div class="badge-updates-list">
+                        <span class="badge-updates">32x32</span> 
+                    </div>
+                    <div class="updates-list-info">
+                        <strong>{{nickname}}</strong>
+                        <p>{{description}}</p>
+                    </div>
+                </div>
+            {{/each}}
+            </div>
+            {{#with show_all}}
+            <a class="btn btn-open" href="{{url}}">{{text}}</a>
+            {{/with}}
+            {{/with}}
+        </section>
+
+        <section class="expirience">
+            {{#with expirience}}
+                <strong>{{title}}</strong>
+                <div class="badge-hot">
+                    <span class="hot">{{badge}}</span> 
+                </div>
+                <div class="card-group-feedback">
+                   {{#each list}}
+                       <div class="card-feedback">
+                           <strong>{{name}}</strong>
+                           <p>{{details}}</p>
+                       </div>
+                   {{/each}}
+                </div>
+            {{/with}}
+        </section>
+
+        <section>
+           {{> footer}}
+        </section> 
+    </div>
+</main>
