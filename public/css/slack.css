@@ -1,0 +1,71 @@
+@font-face {
+    font-family:'HelveticaNeueBold';
+    src: url('/font/HelveticaNeueBold.ttf');
+}
+:root {
+    --page-width-big: 1230px;
+    --page-width-medium: 1000px;
+    --page-width-small: 700px;
+
+    --spacing-1: 8px;
+    --spacing-2: 10px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
+    --spacing-7: 36px;
+
+    --size-s: 14px;
+    --size-m: 16px;
+    --size-xm: 20px;
+    --size-l: 24px;
+    --size-xl: 36px;
+
+    --color-primary: #007BFF;
+    --color-white: #FFFFFF;
+
+    --border-radius-s: 4px;
+    --border-radius-m: 12px;
+    
+} 
+
+body {
+    font-family: 'HelveticaNeueBold', sans-serif;
+    background-color: var(--color-white);
+}
+
+.page {
+    display: grid;
+}
+
+.page-section {
+    display: flex;
+    justify-content: center;
+}
+
+.page-content {
+    display: grid;
+    width: 100%;
+    max-width: var(--page-width);
+    padding: var(--spacing-4);
+}
+
+@media all and (1230px <= width) {
+    .page-content {
+        max-width: var(--page-width-big);
+    }
+}
+
+@media all and (1000px <= width < 1230px) {
+    .page-content {
+        max-width: var(--page-width-medium);
+    }
+}
+
+@media all and (700px <= width < 1000px) {
+    .page-content {
+        max-width: var(--page-width-small);
+    }
+}
+
+
